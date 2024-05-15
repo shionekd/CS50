@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            function changeToRed() {
+                document.getElementById('red').style.backgroundColor = 'red';
+                document.querySelector('#Q1').innerHTML = 'Correct!';
+                document.getElementById('blue').style.backgroundColor = '';
+                document.getElementById('green').style.backgroundColor = '';
+                document.getElementById('black').style.backgroundColor = '';
+            }
+            function changeToBlue() {
+                document.getElementById('blue').style.backgroundColor = 'green';
+                document.querySelector('#Q1').innerHTML = 'Incorrect';
+                document.getElementById('red').style.backgroundColor = '';
+                document.getElementById('green').style.backgroundColor = '';
+                document.getElementById('black').style.backgroundColor = '';
+            }
+            function changeToGreen() {
+                document.getElementById('green').style.backgroundColor = 'green';
+                document.querySelector('#Q1').innerHTML = 'Incorrect';
+                document.getElementById('red').style.backgroundColor = '';
+                document.getElementById('blue').style.backgroundColor = '';
+                document.getElementById('black').style.backgroundColor = '';
+            }
+            function changeToBlack() {
+                document.getElementById('black').style.backgroundColor = 'green';
+                document.querySelector('#Q1').innerHTML = 'Incorrect';
+                document.getElementById('red').style.backgroundColor = '';
+                document.getElementById('blue').style.backgroundColor = '';
+                document.getElementById('green').style.backgroundColor = '';
+            }
+            function submit() {
+                let input = document.querySelector('input');
+                if (input.value == 'ao') {
+                    input.style.backgroundColor = 'green';
+                    input.parentElement.querySelector('#Q2').innerHTML = 'Correct!';
+                }
+                else {
+                    input.style.backgroundColor = 'red';
+                    input.parentElement.querySelector('#Q2').innerHTML = 'Incorrect';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                    <h3>What "赤" means?</h3>
+                    <button id="red" onclick="changeToRed();">Red</button>
+                    <button id="blue" onclick="changeToBlue();">Blue</button>
+                    <button id="green" onclick="changeToGreen();">Green</button>
+                    <button id="black" onclick="changeToBlack();">Black</button>
+                    <p id="Q1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                    <h3>What "青" means?</h3>
+                    <input class="answer">&nbsp;<button id="submit" onclick="submit();">Check Answer</button>
+                    <p id="Q2"></p>
+            </div>
+        </div>
+    </body>
+</html>

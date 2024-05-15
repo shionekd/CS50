@@ -1,0 +1,11 @@
+distinct HTML tags:
+<header>, <nav>, <div>, <a>, <button>, <span>, <ul>, <li>, <p>, <img>
+
+CSS:
+background-color, width, height, margin-top, margin-left, font-size, text-align, font-family
+
+JavaScript:
+Created a "Nice button", and when people clicked the button, alerts the user has clicked.
+
+Bootstrap:
+Used to adjust styling and create slideshows.

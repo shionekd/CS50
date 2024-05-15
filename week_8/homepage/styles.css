@@ -1,0 +1,57 @@
+body {
+    background-color: #f5f5dc;
+}
+
+.top_img{
+    width: 800px;
+    height: 600px;
+}
+
+.about_img {
+    width: 200px;
+    height: 200px;
+}
+
+.about_photo {
+    margin-top: 80px;
+    margin-left: 180px;
+}
+
+.about_info {
+    margin-left: -100px;
+}
+
+.port_img {
+    width: 900px;
+    height: 650px;
+}
+
+.fontbig {
+    font-size: 18px;
+}
+
+.contact_table {
+    text-align: center;
+}
+
+td {
+    width: 200px;
+    height: 50px;
+}
+
+#main {
+    text-align: center;
+}
+
+.textLeft {
+    text-align: left;
+}
+
+.mtl {
+    margin-left: 50px;
+}
+
+.welcome {
+    margin-top: 100px;
+    font-family:"Segoe UI";
+}
