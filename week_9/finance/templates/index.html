@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+    <h1>Stocks</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Price</th>
+                <th>Shares</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows if not row.shares_sum == 0 %}
+                <tr>
+                    <td>{{ row.symbol }}</td>
+                    <td>${{ row.price }}</td>
+                    <td>{{ row.shares_sum }}</td>
+                    <td>${{ row.shares_price|round(2) }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>CASH</td>
+                <td>${{ cash }}</td>
+            </tr>
+            <tr>
+                <td>TOTAL</td>
+                <td>$ {{ cash + shares_sum }}</td>
+            </tr>
+        </thead>
+    </table>
+{% endblock %}

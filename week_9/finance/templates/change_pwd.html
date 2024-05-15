@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Change_pwd
+{% endblock %}
+
+{% block main %}
+    <h1>Change Password</h1>
+    <form action="/change_pwd" method="post">
+        <div class="mb-3 sell_table">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto mt-3" name="crt_psw" placeholder="Current Password" type="text">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto mt-3" name="cfm_pwd" placeholder="Comfirm Password" type="text">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto mt-3" name="new_psw" placeholder="New Password" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Change</button>
+    </form>
+{% endblock %}

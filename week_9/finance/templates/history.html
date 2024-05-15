@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <h1>History</h1>
+    <table  class="table table-sm">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+                <tr>
+                    {% if row.action == '1' %}
+                        <td>Buy</td>
+                    {% elif row.action == '2' %}
+                        <td>Sell</td>
+                    {% else %}
+                        <td>Add Cash</td>
+                    {% endif %}
+
+                    {% if row.shares == 'cash' %}
+                        <td>-</td>
+                    {% else %}
+                        <td>{{ row.symbol }}</td>
+                    {% endif %}
+
+
+                    {% if row.shares|int < 0 %}
+                        <td>{{ row.shares * -1}}</td>
+                    {% elif row.shares == 'cash' %}
+                        <td>-</td>
+                    {% else %}
+                        <td>{{ row.shares }}</td>
+                    {% endif %}
+
+                    <td>${{ row.price }}</td>
+
+                    {% if row.shares|int < 0 %}
+                        <td> -${{ row.shares * row.price * -1 }}</td>
+                    {% elif row.shares == 'cash' %}
+                        <td>{{ row.price }}</td>
+                    {% else %}
+                        <td>${{ row.shares * row.price }}</td>
+                    {% endif %}
+
+                    <td>{{ row. date }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
