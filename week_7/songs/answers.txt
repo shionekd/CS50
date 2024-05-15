@@ -1,0 +1,11 @@
+If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+
+I would create a predetermined list of audio auras that have ranges for all of the describing fields in this song database.
+Then you could easily query the db to get the overall average values of these fields and assign them to an aura.
+
+
+Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener.
+What better ways of calculating this aura would you propose?
+
+It might only represent a small subset of a users actual aura and the averages would be heavily skewed by outliers.
+I would do this better by doing an aura survey and using neural network ai to categorize users to fit the results of the survey.
