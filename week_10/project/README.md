@@ -16,7 +16,7 @@ I am looking forward to updating this list in the future as I would like to visi
 
 ## Each Page's Description
 
-####　layout.html:
+####layout.html:
 This is the html for the general framework layout.
 Javascript is described in wish.html and travel.html.
 The Javascript is designed to work in conjunction with Region and Country in the list, narrowing down and displaying countries in the region selected by Region.
